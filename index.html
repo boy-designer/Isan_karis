@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Clone Modern</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            background: #181818;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ff0000;
+        }
+
+        .logo img {
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 550px;
+            display: flex;
+            margin: 0 30px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 14px;
+            border: none;
+            outline: none;
+            border-radius: 20px 0 0 20px;
+            background: #121212;
+            color: #fff;
+        }
+
+        .search-box button {
+            padding: 10px 18px;
+            border: none;
+            background: #303030;
+            color: #fff;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #ff0000;
+        }
+
+        .nav-icons i {
+            margin-left: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .nav-icons i:hover {
+            color: #ff0000;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #ff0000, #8b0000);
+            border-radius: 0 0 40px 40px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            max-width: 600px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* ===== VIDEO GRID ===== */
+        .container {
+            padding: 30px 40px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .video-card {
+            background: #181818;
+            border-radius: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 170px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .video-info {
+            padding: 14px;
+        }
+
+        .video-info h3 {
+            font-size: 15px;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .video-info p {
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .search-box {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <img src="https://yt3.googleusercontent.com/ytc/AIdro_lyq9MdVZlic7V7l7zSEBzBFT-9MvFheDs1jvrb7DLvmcM=s160-c-k-c0x00ffffff-no-rj"
+                alt=""> Isan Karis
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Cari video...">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="nav-icons">
+            <i class="fa-solid fa-video"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-user-circle"></i>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Welcome to Isan Karis</h1>
+        <p>Youtube Gamer video platform about the Magic Chess GoGo Game</p>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="container">
+        <div class="video-grid">
+
+            <div class="video-card" data-title="THE REAL CLAUDE TULANG PUNGGUNG WKWK !! - Magic Chess Gogo">
+                <a href="https://youtu.be/1YAhad_IcCc?si=JebRwulQW6X9EpD7">
+                    <div class="thumbnail"
+                        style="background-image:url('https://img.youtube.com/vi/1YAhad_IcCc/maxresdefault.jpg')"></div>
+                </a>
+                <div class="video-info">
+                    <h3>THE REAL CLAUDE TULANG PUNGGUNG WKWK !! - Magic Chess Gogo</h3>
+                    <p>2,5k Views • 1 Hour Ago</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-title="PERFECT COMBO BUAT YANG DOYAN MAGE-MAGEAN !! - Magic Chess Gogo">
+                <a href="https://youtu.be/BJpBao451Jo?si=5OgpL1O4sWO9Ra_H">
+                    <div class="thumbnail"
+                        style="background-image:url('https://img.youtube.com/vi/BJpBao451Jo/maxresdefault.jpg')"></div>
+                </a>
+                <div class="video-info">
+                    <h3>PERFECT COMBO BUAT YANG DOYAN MAGE-MAGEAN !! - Magic Chess Gogo</h3>
+                    <p>53k Views • 1 Days Ago</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-title="CARA GAMPANG BIKIN 999 STACKS ASPIRANT PAKE LUNOX!! - Magic Chess Gogo">
+                <a href="https://youtu.be/R4eKjnWPTLU?si=EyBGlUeXCgB0w9nU">
+                    <div class="thumbnail"
+                        style="background-image:url('https://img.youtube.com/vi/R4eKjnWPTLU/maxresdefault.jpg')"></div>
+                </a>
+                <div class="video-info">
+                    <h3>CARA GAMPANG BIKIN 999 STACKS ASPIRANT PAKE LUNOX!! - Magic Chess Gogo</h3>
+                    <p>55k Views • 2 Days Ago</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- JAVASCRIPT -->
+        <script>
+            const searchInput = document.querySelector('.search-box input');
+            const videoCards = document.querySelectorAll('.video-card');
+
+            searchInput.addEventListener('keyup', () => {
+                const keyword = searchInput.value.toLowerCase();
+
+                videoCards.forEach(card => {
+                    const title = card.dataset.title;
+
+                    // cek apakah huruf awal / kata sama
+                    if (title.startsWith(keyword) || title.includes(keyword)) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        </script>
+
+
+</body>
+
+</html>
